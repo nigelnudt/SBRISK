@@ -1,0 +1,28 @@
+Put the two images into the folder "images/" in the name of img1.xxx and img2.xxx and 
+run the file of "bin\run.bat" £ºthe text in run.bat is: and BRISK30 means of a detector of AGAST with threshold 30,
+the BRISK/SBRISK is the descriptor, the 100 is the matching threshold of Hamming distance, the last 1 is the run times. you can run 100 times for time performance evaluation
+testmatch ..\images 2 BRISK30 BRISK  100 1
+testmatch ..\images 2 BRISK30 SBRISK 100 1
+ 
+
+pause...
+The results  store under the folder of "images/"
+This file can only run on the computer equipped with Intel processor;
+
+
+img1.txt:The keypoint that BRISK founded in img1.
+img2.txt:The keypoint that BRISK founded in img2.
+img1_black.txt:black pattern that SBRISK founded in img1;
+img2_black.txt:black pattern that SBRISK founded in img2;
+img1_white.txt,img2_white: white pattern that SBRISK founded in img1/2;
+img1_img2.txt: matching result of BRISK
+img1_img2_black.txt:matching result of the black patterns of SBRISK
+img1_img2_white.txt:matching result of the black patterns of SBRISK
+
+format of the img1.txt and img2.txt
+x y score white£¨1£©/black£¨-1£©and 64 intergers that means the 64bytes of feature vector;
+
+format of the matching result txt
+img2_idx img1_idx distance
+
+folder ¡®testmatch¡¯ is the source code£»

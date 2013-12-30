@@ -1,0 +1,3 @@
+testmatch ..\images 2 BRISK30 BRISK  100 1
+testmatch ..\images 2 BRISK30 SBRISK 100 1
+pause...
